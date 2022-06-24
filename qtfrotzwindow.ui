@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtFrotzWindow</class>
+ <widget class="QMainWindow" name="QtFrotzWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1540</width>
+    <height>998</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QtFrotzView" name="frotzView" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans Mono</family>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QScreenKeyboard" name="widget_2" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1540</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionStart"/>
+    <addaction name="actionSettings"/>
+    <addaction name="actionHelp"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuSavestate">
+    <property name="title">
+     <string>Savestate</string>
+    </property>
+    <widget class="QMenu" name="menuQuicksave">
+     <property name="title">
+      <string>Quicksave</string>
+     </property>
+     <addaction name="actionSaveSlot1"/>
+     <addaction name="actionSaveSlot2"/>
+     <addaction name="actionSaveSlot3"/>
+     <addaction name="actionSaveSlot4"/>
+     <addaction name="actionSaveSlot5"/>
+     <addaction name="actionSaveSlot6"/>
+     <addaction name="actionSaveSlot7"/>
+     <addaction name="actionSaveSlot8"/>
+     <addaction name="actionSaveSlot9"/>
+    </widget>
+    <widget class="QMenu" name="menuQuickrestore">
+     <property name="title">
+      <string>Quickrestore</string>
+     </property>
+     <addaction name="actionRestoreSlot1"/>
+     <addaction name="actionRestoreSlot2"/>
+     <addaction name="actionRestoreSlot3"/>
+     <addaction name="actionRestoreSlot4"/>
+     <addaction name="actionRestoreSlot5"/>
+     <addaction name="actionRestoreSlot6"/>
+     <addaction name="actionRestoreSlot7"/>
+     <addaction name="actionRestoreSlot8"/>
+     <addaction name="actionRestoreSlot9"/>
+    </widget>
+    <addaction name="actionSave"/>
+    <addaction name="menuQuicksave"/>
+    <addaction name="actionRestore"/>
+    <addaction name="menuQuickrestore"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSavestate"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionRestore">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Restore</string>
+   </property>
+  </action>
+  <action name="actionSaveSlot1">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 1</string>
+   </property>
+  </action>
+  <action name="actionSaveSlot2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 2</string>
+   </property>
+  </action>
+  <action name="actionSaveSlot3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 3</string>
+   </property>
+  </action>
+  <action name="actionSaveSlot4">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 4</string>
+   </property>
+  </action>
+  <action name="actionSaveSlot5">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 5</string>
+   </property>
+  </action>
+  <action name="actionSaveSlot6">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 6</string>
+   </property>
+  </action>
+  <action name="actionSaveSlot7">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 7</string>
+   </property>
+  </action>
+  <action name="actionSaveSlot8">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 8</string>
+   </property>
+  </action>
+  <action name="actionSaveSlot9">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 9</string>
+   </property>
+  </action>
+  <action name="actionRestoreSlot1">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 1</string>
+   </property>
+  </action>
+  <action name="actionRestoreSlot2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 2</string>
+   </property>
+  </action>
+  <action name="actionRestoreSlot3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 3</string>
+   </property>
+  </action>
+  <action name="actionRestoreSlot4">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 4</string>
+   </property>
+  </action>
+  <action name="actionRestoreSlot5">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 5</string>
+   </property>
+  </action>
+  <action name="actionRestoreSlot6">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 6</string>
+   </property>
+  </action>
+  <action name="actionRestoreSlot7">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 7</string>
+   </property>
+  </action>
+  <action name="actionRestoreSlot8">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 8</string>
+   </property>
+  </action>
+  <action name="actionRestoreSlot9">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slot 9</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QScreenKeyboard</class>
+   <extends>QWidget</extends>
+   <header>qscreenkeyboard.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QtFrotzView</class>
+   <extends>QWidget</extends>
+   <header>qtfrotzview.h</header>
+   <container>1</container>
+   <slots>
+    <signal>gameStart()</signal>
+    <signal>gameQuit()</signal>
+    <slot>start()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionStart</sender>
+   <signal>triggered()</signal>
+   <receiver>frotzView</receiver>
+   <slot>start()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>769</x>
+     <y>492</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

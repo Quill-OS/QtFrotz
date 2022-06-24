@@ -1,0 +1,164 @@
+<layouts>
+  <layout name="default">
+    <key row="1" column="1">1</key>
+    <key row="1" column="2">2</key>
+    <key row="1" column="3">3</key>
+    <key row="1" column="4">4</key>
+    <key row="1" column="5">5</key>
+    <key row="1" column="6">6</key>
+    <key row="1" column="7">7</key>
+    <key row="1" column="8">8</key>
+    <key row="1" column="9">9</key>
+    <key row="1" column="10">0</key>
+    <key row="1" column="11" value="{BACKSPACE}">←</key>
+    <key row="2" column="1">q</key>
+    <key row="2" column="2">w</key>
+    <key row="2" column="3">e</key>
+    <key row="2" column="4">r</key>
+    <key row="2" column="5">t</key>
+    <key row="2" column="6">y</key>
+    <key row="2" column="7">u</key>
+    <key row="2" column="8">i</key>
+    <key row="2" column="9">o</key>
+    <key row="2" column="10">p</key>
+    <key row="2" column="11" value="{ENTER}" rowspan="2">↲</key>
+    <key row="3" column="1">a</key>
+    <key row="3" column="2">s</key>
+    <key row="3" column="3">d</key>
+    <key row="3" column="4">f</key>
+    <key row="3" column="5">g</key>
+    <key row="3" column="6">h</key>
+    <key row="3" column="7">j</key>
+    <key row="3" column="8">k</key>
+    <key row="3" column="9">l</key>
+    <key row="3" column="10">:</key>
+    <key row="4" column="1">z</key>
+    <key row="4" column="2">x</key>
+    <key row="4" column="3">c</key>
+    <key row="4" column="4">v</key>
+    <key row="4" column="5">b</key>
+    <key row="4" column="6">n</key>
+    <key row="4" column="7">m</key>
+    <key row="4" column="8">'</key>
+    <key row="4" column="9">.</key>
+    <key row="4" column="10" value="{UP}">↑</key>
+    <key row="4" column="11">-</key>
+    <key row="5" column="1" value="{LAYOUT:shift}">⇧</key>
+    <key row="5" column="2">[</key>
+    <key row="5" column="3">]</key>
+    <key row="5" column="4" value="{SPACE}" colspan="3"></key>
+    <key row="5" column="7">?</key>
+    <key row="5" column="8">_</key>
+    <key row="5" column="9" value="{LEFT}">←</key>
+    <key row="5" column="10" value="{DOWN}">↓</key>
+    <key row="5" column="11" value="{RIGHT}">→</key>
+  </layout>
+  <layout name="shift" onepress="true" >
+    <key modifier="SHIFT" row="1" column="1">!</key>
+    <key modifier="SHIFT" row="1" column="2">@</key>
+    <key modifier="SHIFT" row="1" column="3">#</key>
+    <key modifier="SHIFT" row="1" column="4">$</key>
+    <key modifier="SHIFT" row="1" column="5">%</key>
+    <key modifier="SHIFT" row="1" column="6">^</key>
+    <key modifier="SHIFT" row="1" column="7">&amp;</key>
+    <key modifier="SHIFT" row="1" column="8">*</key>
+    <key modifier="SHIFT" row="1" column="9">(</key>
+    <key modifier="SHIFT" row="1" column="10">)</key>
+    <key modifier="SHIFT" row="1" column="11" value="{BACKSPACE}">←</key>
+    <key modifier="SHIFT" row="2" column="1">Q</key>
+    <key modifier="SHIFT" row="2" column="2">W</key>
+    <key modifier="SHIFT" row="2" column="3">E</key>
+    <key modifier="SHIFT" row="2" column="4">R</key>
+    <key modifier="SHIFT" row="2" column="5">T</key>
+    <key modifier="SHIFT" row="2" column="6">Y</key>
+    <key modifier="SHIFT" row="2" column="7">U</key>
+    <key modifier="SHIFT" row="2" column="8">I</key>
+    <key modifier="SHIFT" row="2" column="9">O</key>
+    <key modifier="SHIFT" row="2" column="10">P</key>
+    <key modifier="SHIFT" row="2" column="11" value="{ENTER}" rowspan="2">↲</key>
+    <key modifier="SHIFT" row="3" column="1">A</key>
+    <key modifier="SHIFT" row="3" column="2">S</key>
+    <key modifier="SHIFT" row="3" column="3">D</key>
+    <key modifier="SHIFT" row="3" column="4">F</key>
+    <key modifier="SHIFT" row="3" column="5">G</key>
+    <key modifier="SHIFT" row="3" column="6">H</key>
+    <key modifier="SHIFT" row="3" column="7">J</key>
+    <key modifier="SHIFT" row="3" column="8">K</key>
+    <key modifier="SHIFT" row="3" column="9">L</key>
+    <key modifier="SHIFT" row="3" column="10">;</key>
+    <key modifier="SHIFT" row="4" column="1">Z</key>
+    <key modifier="SHIFT" row="4" column="2">X</key>
+    <key modifier="SHIFT" row="4" column="3">C</key>
+    <key modifier="SHIFT" row="4" column="4">V</key>
+    <key modifier="SHIFT" row="4" column="5">B</key>
+    <key modifier="SHIFT" row="4" column="6">N</key>
+    <key modifier="SHIFT" row="4" column="7">M</key>
+    <key modifier="SHIFT" row="4" column="8">"</key>
+    <key modifier="SHIFT" row="4" column="9">,</key>
+    <key modifier="SHIFT" row="4" column="10" value="{UP}">↑</key>
+    <key modifier="SHIFT" row="4" column="11">+</key>
+    <key modifier="SHIFT" row="5" column="1" value="{LAYOUT:capslock}">⇪</key>
+    <key modifier="SHIFT" row="5" column="2">{</key>
+    <key modifier="SHIFT" row="5" column="3">}</key>
+    <key modifier="SHIFT" row="5" column="4" value="{SPACE}" colspan="3"></key>
+    <key modifier="SHIFT" row="5" column="7">/</key>
+    <key modifier="SHIFT" row="5" column="8">=</key>
+    <key modifier="SHIFT" row="5" column="9" value="{LEFT}">←</key>
+    <key modifier="SHIFT" row="5" column="10" value="{DOWN}">↓</key>
+    <key modifier="SHIFT" row="5" column="11" value="{RIGHT}">→</key>
+  </layout>
+  <layout name="capslock">
+    <key modifier="SHIFT" row="1" column="1">!</key>
+    <key modifier="SHIFT" row="1" column="2">@</key>
+    <key modifier="SHIFT" row="1" column="3">#</key>
+    <key modifier="SHIFT" row="1" column="4">$</key>
+    <key modifier="SHIFT" row="1" column="5">%</key>
+    <key modifier="SHIFT" row="1" column="6">^</key>
+    <key modifier="SHIFT" row="1" column="7">&amp;</key>
+    <key modifier="SHIFT" row="1" column="8">*</key>
+    <key modifier="SHIFT" row="1" column="9">(</key>
+    <key modifier="SHIFT" row="1" column="10">)</key>
+    <key modifier="SHIFT" row="1" column="11" value="{BACKSPACE}">←</key>
+    <key modifier="SHIFT" row="2" column="1">Q</key>
+    <key modifier="SHIFT" row="2" column="2">W</key>
+    <key modifier="SHIFT" row="2" column="3">E</key>
+    <key modifier="SHIFT" row="2" column="4">R</key>
+    <key modifier="SHIFT" row="2" column="5">T</key>
+    <key modifier="SHIFT" row="2" column="6">Y</key>
+    <key modifier="SHIFT" row="2" column="7">U</key>
+    <key modifier="SHIFT" row="2" column="8">I</key>
+    <key modifier="SHIFT" row="2" column="9">O</key>
+    <key modifier="SHIFT" row="2" column="10">P</key>
+    <key modifier="SHIFT" row="2" column="11" value="{ENTER}" rowspan="2">↲</key>
+    <key modifier="SHIFT" row="3" column="1">A</key>
+    <key modifier="SHIFT" row="3" column="2">S</key>
+    <key modifier="SHIFT" row="3" column="3">D</key>
+    <key modifier="SHIFT" row="3" column="4">F</key>
+    <key modifier="SHIFT" row="3" column="5">G</key>
+    <key modifier="SHIFT" row="3" column="6">H</key>
+    <key modifier="SHIFT" row="3" column="7">J</key>
+    <key modifier="SHIFT" row="3" column="8">K</key>
+    <key modifier="SHIFT" row="3" column="9">L</key>
+    <key modifier="SHIFT" row="3" column="10">;</key>
+    <key modifier="SHIFT" row="4" column="1">Z</key>
+    <key modifier="SHIFT" row="4" column="2">X</key>
+    <key modifier="SHIFT" row="4" column="3">C</key>
+    <key modifier="SHIFT" row="4" column="4">V</key>
+    <key modifier="SHIFT" row="4" column="5">B</key>
+    <key modifier="SHIFT" row="4" column="6">N</key>
+    <key modifier="SHIFT" row="4" column="7">M</key>
+    <key modifier="SHIFT" row="4" column="8">"</key>
+    <key modifier="SHIFT" row="4" column="9">,</key>
+    <key modifier="SHIFT" row="4" column="10" value="{UP}">↑</key>
+    <key modifier="SHIFT" row="4" column="11">+</key>
+    <key modifier="SHIFT" row="5" column="1" value="{LAYOUT:default}">⇫</key>
+    <key modifier="SHIFT" row="5" column="2">{</key>
+    <key modifier="SHIFT" row="5" column="3">}</key>
+    <key modifier="SHIFT" row="5" column="4" value="{SPACE}" colspan="3"></key>
+    <key modifier="SHIFT" row="5" column="7">/</key>
+    <key modifier="SHIFT" row="5" column="8">=</key>
+    <key modifier="SHIFT" row="5" column="9" value="{LEFT}">←</key>
+    <key modifier="SHIFT" row="5" column="10" value="{DOWN}">↓</key>
+    <key modifier="SHIFT" row="5" column="11" value="{RIGHT}">→</key>
+  </layout>
+</layouts>

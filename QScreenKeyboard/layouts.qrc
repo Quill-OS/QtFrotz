@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>layouts/us/layout.xml</file>
+    </qresource>
+</RCC>
