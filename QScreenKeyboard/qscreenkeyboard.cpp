@@ -8,7 +8,7 @@
 #include <QTextStream>
 #include <QBoxLayout>
 #include <QXmlStreamReader>
-
+#include <QFrame>
 
 QScreenKeyboard::QScreenKeyboard(QWidget *parent, QString layout) :
     QWidget(parent),
@@ -16,6 +16,12 @@ QScreenKeyboard::QScreenKeyboard(QWidget *parent, QString layout) :
 {
     QScreenKeyboard::setFont(QFont("u001"));
     mainLayout = new QBoxLayout(QBoxLayout::TopToBottom);
+    QFrame * line;
+    line = new QFrame(this);
+    line->setFrameShape(QFrame::HLine);
+    line->setFrameShadow(QFrame::Plain);
+    line->setLineWidth(4);
+    mainLayout->addWidget(line);
 
     if(layout.isEmpty())
         layout = "us";
