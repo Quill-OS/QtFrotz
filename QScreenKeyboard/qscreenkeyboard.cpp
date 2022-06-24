@@ -9,6 +9,7 @@
 #include <QBoxLayout>
 #include <QXmlStreamReader>
 #include <QFrame>
+#include <QLabel>
 
 QScreenKeyboard::QScreenKeyboard(QWidget *parent, QString layout) :
     QWidget(parent),
@@ -16,12 +17,13 @@ QScreenKeyboard::QScreenKeyboard(QWidget *parent, QString layout) :
 {
     QScreenKeyboard::setFont(QFont("u001"));
     mainLayout = new QBoxLayout(QBoxLayout::TopToBottom);
-    QFrame * line;
-    line = new QFrame(this);
-    line->setFrameShape(QFrame::HLine);
-    line->setFrameShadow(QFrame::Plain);
-    line->setLineWidth(4);
-    mainLayout->addWidget(line);
+
+    QFrame * line1;
+    line1 = new QFrame(this);
+    line1->setFrameShape(QFrame::HLine);
+    line1->setFrameShadow(QFrame::Plain);
+    line1->setLineWidth(4);
+    mainLayout->addWidget(line1);
 
     if(layout.isEmpty())
         layout = "us";
@@ -32,7 +34,22 @@ QScreenKeyboard::QScreenKeyboard(QWidget *parent, QString layout) :
     }
     showLayout("default");
 
-    setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Maximum);
+    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Maximum);
+
+    QFrame * line2;
+    line2 = new QFrame(this);
+    line2->setFrameShape(QFrame::HLine);
+    line2->setFrameShadow(QFrame::Plain);
+    line2->setLineWidth(4);
+    mainLayout->addWidget(line2);
+
+    QLabel * label = new QLabel(this);
+    label->setText("QtFrotz");
+    label->setFont(QFont("Wnter"));
+    label->setAlignment(Qt::AlignCenter);
+    label->setStyleSheet("font-weight: bold");
+    mainLayout->addWidget(label);
+
     this->setLayout(mainLayout);
 }
 
@@ -62,9 +79,14 @@ void QScreenKeyboard::loadLayouts(QString locale)
                       if(attributes.hasAttribute("value"))
                          value = attributes.value("value").toString();
                       QKeyButton *button = new QKeyButton(text, value, this);
-                      if(text == "⏎" or text == "⇧" or text == "↑" or text == "↓" or text == "←" or text == "→" or text == "?") {
+
+                      if(text == "⏎") {
                          button->setFont(QFont("Overpass Mono"));
                       }
+                      else if(text == "↑" or text == "↓" or text == "←" or text == "→" or text == "?") {
+                         button->setFont(QFont("Wnter"));
+                      }
+
                       button->setFocusPolicy(Qt::NoFocus);
                       button->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Preferred);
                       int columnSpan = 1;

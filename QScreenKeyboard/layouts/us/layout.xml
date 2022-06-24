@@ -43,10 +43,9 @@
     <key row="4" column="9">.</key>
     <key row="4" column="10" value="{UP}">↑</key>
     <key row="4" column="11">-</key>
-    <key row="5" column="1" value="{LAYOUT:shift}">⇧</key>
-    <key row="5" column="2">[</key>
-    <key row="5" column="3">]</key>
-    <key row="5" column="4" value="{SPACE}" colspan="3"></key>
+    <key row="5" column="1">[</key>
+    <key row="5" column="2">]</key>
+    <key row="5" column="3" value="{SPACE}" colspan="4"></key>
     <key row="5" column="7">?</key>
     <key row="5" column="8">_</key>
     <key row="5" column="9" value="{LEFT}">←</key>

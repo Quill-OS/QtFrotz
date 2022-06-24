@@ -48,8 +48,11 @@
      <x>0</x>
      <y>0</y>
      <width>1540</width>
-     <height>21</height>
+     <height>32</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">padding: 5px; spacing: 20px; font-family: u001</string>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
