@@ -825,13 +825,13 @@ QString QtFrotzView::getFileName(QString defaultFileName, int flag)
 void QtFrotzView::loadSettings()
 {
     QSettings settings("frotz.ini",QSettings::IniFormat,this);
-    curSettings.insert(KoSettingsDialog::FontSize,settings.value("FontSize","10"));
+    curSettings.insert(KoSettingsDialog::FontSize,settings.value("FontSize","8"));
 }
 
 void QtFrotzView::saveSettings()
 {
     QSettings settings("frotz.ini",QSettings::IniFormat,this);
-    settings.setValue("FontSize",curSettings.value(KoSettingsDialog::FontSize,10));
+    settings.setValue("FontSize",curSettings.value(KoSettingsDialog::FontSize,8));
 }
 
 

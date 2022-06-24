@@ -14,6 +14,7 @@ QScreenKeyboard::QScreenKeyboard(QWidget *parent, QString layout) :
     QWidget(parent),
     isOnePress(false)
 {
+    QScreenKeyboard::setFont(QFont("u001"));
     mainLayout = new QBoxLayout(QBoxLayout::TopToBottom);
 
     if(layout.isEmpty())
@@ -55,6 +56,9 @@ void QScreenKeyboard::loadLayouts(QString locale)
                       if(attributes.hasAttribute("value"))
                          value = attributes.value("value").toString();
                       QKeyButton *button = new QKeyButton(text, value, this);
+                      if(text == "⏎" or text == "⇧" or text == "↑" or text == "↓" or text == "←" or text == "→" or text == "?") {
+                         button->setFont(QFont("Overpass Mono"));
+                      }
                       button->setFocusPolicy(Qt::NoFocus);
                       button->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Preferred);
                       int columnSpan = 1;

@@ -21,7 +21,7 @@
     <key row="2" column="8">i</key>
     <key row="2" column="9">o</key>
     <key row="2" column="10">p</key>
-    <key row="2" column="11" value="{ENTER}" rowspan="2">↲</key>
+    <key row="2" column="11" value="{ENTER}" rowspan="2">⏎</key>
     <key row="3" column="1">a</key>
     <key row="3" column="2">s</key>
     <key row="3" column="3">d</key>

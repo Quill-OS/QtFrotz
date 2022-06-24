@@ -13,7 +13,7 @@ KoFileDialog::KoFileDialog(QString defaultPath, QWidget *parent) :
     ui->setupUi(this);
     model = new QFileSystemModel();
     model->setNameFilterDisables(false);
-    model->setRootPath("/");
+    model->setRootPath("/app-misc/games");
     ui->listViewFiles->setModel(model);
     setMouseTracking(true);
     ui->qScreenKeyboard->hide();
@@ -25,7 +25,7 @@ KoFileDialog::KoFileDialog(QString defaultPath, QWidget *parent) :
     ui->listViewFiles->viewport()->installEventFilter(this);
     ui->btnCancel->installEventFilter(this);
     ui->btnUp->installEventFilter(this);
-    changePath(QDir::currentPath());
+    changePath("/app-misc/games");
 }
 
 QString KoFileDialog::getSaveFile(QString defaultPath, QStringList filters)
