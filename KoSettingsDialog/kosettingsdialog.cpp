@@ -7,6 +7,13 @@ KoSettingsDialog::KoSettingsDialog(Settings settings, QWidget *parent) :
     settings(settings)
 {
     ui->setupUi(this);
+
+    ui->spinBoxFontSize->setFont(QFont("u001"));
+    ui->btnOk->setFont(QFont("u001"));
+    ui->label->setFont(QFont("u001"));
+
+    ui->btnOk->setStyleSheet("padding: 10px");
+
     ui->spinBoxFontSize->setValue(settings.value(FontSize).toInt());
     showFullScreen();
 }

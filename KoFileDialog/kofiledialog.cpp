@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <QFileSystemModel>
 #include <QSwipeGesture>
+#include <QScreen>
 
 KoFileDialog::KoFileDialog(QString defaultPath, QWidget *parent) :
     QDialog(parent),
@@ -11,13 +12,29 @@ KoFileDialog::KoFileDialog(QString defaultPath, QWidget *parent) :
     selectionMode(AllFiles)
 {
     ui->setupUi(this);
+
+    ui->lblCurrentPath->setFont(QFont("u001"));
+    ui->textEditFilename->setFont(QFont("u001"));
+    ui->btnOk->setFont(QFont("u001"));
+    ui->btnCancel->setFont(QFont("u001"));
+    ui->btnUp->setFont(QFont("Wnter"));
+    ui->listViewFiles->setFont(QFont("u001"));
+
+    ui->lblCurrentPath->setStyleSheet("padding: 10px");
+    ui->textEditFilename->setStyleSheet("padding: 10px");
+    ui->btnOk->setStyleSheet("padding: 10px");
+    ui->btnCancel->setStyleSheet("padding: 10px");
+    ui->btnUp->setStyleSheet("padding: 10px");
+
     model = new QFileSystemModel();
     model->setNameFilterDisables(false);
-    model->setRootPath("/app-misc/games");
+    model->setRootPath(defaultPath);
     ui->listViewFiles->setModel(model);
     setMouseTracking(true);
     ui->qScreenKeyboard->hide();
-    showFullScreen();
+
+    const QScreen * screen = qApp->primaryScreen();
+    this->setGeometry(QRect(QPoint(0,0), screen->geometry().size()));
 
     ui->textEditFilename->installEventFilter(this);
     ui->btnOk->installEventFilter(this);
@@ -25,21 +42,29 @@ KoFileDialog::KoFileDialog(QString defaultPath, QWidget *parent) :
     ui->listViewFiles->viewport()->installEventFilter(this);
     ui->btnCancel->installEventFilter(this);
     ui->btnUp->installEventFilter(this);
-    changePath("/app-misc/games");
+    changePath(defaultPath);
 }
 
-QString KoFileDialog::getSaveFile(QString defaultPath, QStringList filters)
+QString KoFileDialog::getSaveFile(QString defaultPath, QStringList filters, QString caption)
 {
-    KoFileDialog dialog(defaultPath);
+    KoFileDialog dialog("/app-data");
     dialog.setOkButtonText(tr("Save"));
     dialog.setFilters(filters);
     dialog.exec();
     return dialog.getResult();
 }
 
-QString KoFileDialog::getOpenFile(QString defaultPath, QStringList filters)
+QString KoFileDialog::getOpenFile(QString defaultPath, QStringList filters, QString caption)
 {
-    KoFileDialog dialog(defaultPath);
+    QString path;
+    if(caption == "Restore game...") {
+        path = "/app-data";
+    }
+    else {
+        path = "/app-misc/games";
+    }
+
+    KoFileDialog dialog(path);
     dialog.setOkButtonText(tr("Open"));
     dialog.setSelectionMode(ExistingFiles);
     dialog.setFilters(filters);
@@ -128,7 +153,7 @@ void KoFileDialog::on_btnOk_clicked()
 void KoFileDialog::changePath(QString newPath)
 {
     ui->listViewFiles->setRootIndex(model->index(newPath));
-    ui->lblCurrentPath->setText(QFontMetrics(font()).elidedText(newPath,Qt::ElideLeft, ui->lblCurrentPath->width()));
+    ui->lblCurrentPath->setText(newPath);
 }
 
 void KoFileDialog::on_listViewFiles_clicked(const QModelIndex &index)

@@ -812,9 +812,9 @@ QString QtFrotzView::getFileName(QString defaultFileName, int flag)
 
     if(quicksaveloadslot.isEmpty() || (flag != FILE_RESTORE && flag != FILE_SAVE)){
         if(save)
-            return KoFileDialog::getSaveFile(defaultFileName,QStringList()<<filter);
+            return KoFileDialog::getSaveFile(defaultFileName,QStringList()<<filter,caption);
         else
-            return KoFileDialog::getOpenFile(defaultFileName,QStringList()<<filter);
+            return KoFileDialog::getOpenFile(defaultFileName,QStringList()<<filter,caption);
     }else{
         QString slot = QString("%1_SLOT%2.%3").arg(currentStoryName,quicksaveloadslot,extension);
         quicksaveloadslot.clear();

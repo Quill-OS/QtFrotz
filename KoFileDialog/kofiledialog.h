@@ -21,8 +21,8 @@ public:
 
     explicit KoFileDialog(QString defaultPath = QDir::currentPath(), QWidget *parent = 0);
 
-    static QString getSaveFile(QString defaultPath = "", QStringList filters = QStringList());
-    static QString getOpenFile(QString defaultPath = "", QStringList filters = QStringList());
+    static QString getSaveFile(QString defaultPath = "", QStringList filters = QStringList(), QString caption = "");
+    static QString getOpenFile(QString defaultPath = "", QStringList filters = QStringList(), QString caption = "");
 
     QString getResult(){return result;}
 
